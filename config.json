@@ -8,7 +8,7 @@
   },
   "inbounds": [
     {
-      "port": 10001, "listen": "::", "protocol": "trojan", "tag": "trojan-ws",
+      "port": 10001, "listen": "127.0.0.1", "protocol": "trojan", "tag": "trojan-ws",
       "settings": {"clients": [{"password": "Cxlvin777"}]},
       "streamSettings": {
         "network": "ws", "wsSettings": {"path": "/CxlvinTRWS"},
@@ -17,7 +17,7 @@
       "sniffing": {"enabled": true, "destOverride": ["http", "tls", "fakedns"]}
     },
     {
-      "port": 10002, "listen": "::", "protocol": "vless", "tag": "vless-ws",
+      "port": 10002, "listen": "127.0.0.1", "protocol": "vless", "tag": "vless-ws",
       "settings": {"clients": [{"id": "cxlvin777"}], "decryption": "none"},
       "streamSettings": {
         "network": "ws", "wsSettings": {"path": "/CxlvinVlWS"},
@@ -26,7 +26,7 @@
       "sniffing": {"enabled": true, "destOverride": ["http", "tls", "fakedns"]}
     },
     {
-      "port": 10003, "listen": "::", "protocol": "shadowsocks", "tag": "shadowsocks-ws",
+      "port": 10003, "listen": "127.0.0.1", "protocol": "shadowsocks", "tag": "shadowsocks-ws",
       "settings": {"clients": [{"password": "Cxlvin777", "method": "chacha20-ietf-poly1305"}]},
       "streamSettings": {
         "network": "ws", "wsSettings": {"path": "/CxlvinSSWS"},
@@ -35,7 +35,7 @@
       "sniffing": {"enabled": true, "destOverride": ["http", "tls", "fakedns"]}
     },
     {
-      "port": 10004, "listen": "::", "protocol": "vmess", "tag": "vmess-ws",
+      "port": 10004, "listen": "127.0.0.1", "protocol": "vmess", "tag": "vmess-ws",
       "settings": {"clients": [{"id": "cxlvin777", "alterId": 0, "security": "auto"}]},
       "streamSettings": {
         "network": "ws", "wsSettings": {"path": "/CxlvinVMWS"},
@@ -44,7 +44,7 @@
       "sniffing": {"enabled": true, "destOverride": ["http", "tls", "fakedns"]}
     },
     {
-      "port": 11001, "listen": "::", "protocol": "trojan", "tag": "trojan-hu",
+      "port": 11001, "listen": "127.0.0.1", "protocol": "trojan", "tag": "trojan-hu",
       "settings": {"clients": [{"password": "Cxlvin777"}]},
       "streamSettings": {
         "network": "httpupgrade", "httpupgradeSettings": {"path": "/CxlvinTRHU"},
@@ -53,7 +53,7 @@
       "sniffing": {"enabled": true, "destOverride": ["http", "tls", "fakedns"]}
     },
     {
-      "port": 11002, "listen": "::", "protocol": "vless", "tag": "vless-hu",
+      "port": 11002, "listen": "127.0.0.1", "protocol": "vless", "tag": "vless-hu",
       "settings": {"clients": [{"id": "cxlvin777"}], "decryption": "none"},
       "streamSettings": {
         "network": "httpupgrade", "httpupgradeSettings": {"path": "/CxlvinVlHU"},
@@ -62,7 +62,7 @@
       "sniffing": {"enabled": true, "destOverride": ["http", "tls", "fakedns"]}
     },
     {
-      "port": 11003, "listen": "::", "protocol": "shadowsocks", "tag": "shadowsocks-hu",
+      "port": 11003, "listen": "127.0.0.1", "protocol": "shadowsocks", "tag": "shadowsocks-hu",
       "settings": {"clients": [{"password": "Cxlvin777", "method": "chacha20-ietf-poly1305"}]},
       "streamSettings": {
         "network": "httpupgrade", "httpupgradeSettings": {"path": "/CxlvinSSHU"},
@@ -71,7 +71,7 @@
       "sniffing": {"enabled": true, "destOverride": ["http", "tls", "fakedns"]}
     },
     {
-      "port": 11004, "listen": "::", "protocol": "vmess", "tag": "vmess-hu",
+      "port": 11004, "listen": "127.0.0.1", "protocol": "vmess", "tag": "vmess-hu",
       "settings": {"clients": [{"id": "cxlvin777", "alterId": 0, "security": "auto"}]},
       "streamSettings": {
         "network": "httpupgrade", "httpupgradeSettings": {"path": "/CxlvinVMHU"},
@@ -80,7 +80,7 @@
       "sniffing": {"enabled": true, "destOverride": ["http", "tls", "fakedns"]}
     },
     {
-      "port": 10010, "listen": "::", "protocol": "trojan", "tag": "trojan-xh",
+      "port": 10010, "listen": "127.0.0.1", "protocol": "trojan", "tag": "trojan-xh",
       "settings": {"clients": [{"password": "Cxlvin777"}]},
       "streamSettings": {
         "network": "xhttp", "xhttpSettings": {"path": "/CxlvinTRXH", "mode": "auto"},
@@ -89,7 +89,7 @@
       "sniffing": {"enabled": true, "destOverride": ["http", "tls", "fakedns"]}
     },
     {
-      "port": 10009, "listen": "::", "protocol": "vless", "tag": "vless-xh",
+      "port": 10009, "listen": "127.0.0.1", "protocol": "vless", "tag": "vless-xh",
       "settings": {"clients": [{"id": "cxlvin777"}], "decryption": "none"},
       "streamSettings": {
         "network": "xhttp", "xhttpSettings": {"path": "/CxlvinVlXH", "mode": "auto"},
@@ -98,7 +98,7 @@
       "sniffing": {"enabled": true, "destOverride": ["http", "tls", "fakedns"]}
     },
     {
-      "port": 10012, "listen": "::", "protocol": "shadowsocks", "tag": "shadowsocks-xh",
+      "port": 10012, "listen": "127.0.0.1", "protocol": "shadowsocks", "tag": "shadowsocks-xh",
       "settings": {"clients": [{"password": "Cxlvin777", "method": "chacha20-ietf-poly1305"}]},
       "streamSettings": {
         "network": "xhttp", "xhttpSettings": {"path": "/CxlvinSSXH", "mode": "auto"},
@@ -107,7 +107,7 @@
       "sniffing": {"enabled": true, "destOverride": ["http", "tls", "fakedns"]}
     },
     {
-      "port": 10011, "listen": "::", "protocol": "vmess", "tag": "vmess-xh",
+      "port": 10011, "listen": "127.0.0.1", "protocol": "vmess", "tag": "vmess-xh",
       "settings": {"clients": [{"id": "cxlvin777", "alterId": 0, "security": "auto"}]},
       "streamSettings": {
         "network": "xhttp", "xhttpSettings": {"path": "/CxlvinVMXH", "mode": "auto"},
@@ -116,25 +116,25 @@
       "sniffing": {"enabled": true, "destOverride": ["http", "tls", "fakedns"]}
     },
     {
-      "port": 12001, "listen": "::", "protocol": "trojan", "tag": "trojan-grpc",
+      "port": 12001, "listen": "127.0.0.1", "protocol": "trojan", "tag": "trojan-grpc",
       "settings": {"clients": [{"password": "Cxlvin777"}]},
       "streamSettings": {"network": "grpc", "grpcSettings": {"serviceName": "cxlvintr-grpc"}, "sockopt": {"tcpFastOpen": true, "tcpNoDelay": true, "tcpKeepAliveInterval": 15}},
       "sniffing": {"enabled": true, "destOverride": ["http", "tls"]}
     },
     {
-      "port": 12002, "listen": "::", "protocol": "vmess", "tag": "vmess-grpc",
+      "port": 12002, "listen": "127.0.0.1", "protocol": "vmess", "tag": "vmess-grpc",
       "settings": {"clients": [{"id": "cxlvin777", "alterId": 0}]},
       "streamSettings": {"network": "grpc", "grpcSettings": {"serviceName": "cxlvinvm-grpc"}, "sockopt": {"tcpFastOpen": true, "tcpNoDelay": true, "tcpKeepAliveInterval": 15}},
       "sniffing": {"enabled": true, "destOverride": ["http", "tls"]}
     },
     {
-      "port": 12003, "listen": "::", "protocol": "vless", "tag": "vless-grpc",
+      "port": 12003, "listen": "127.0.0.1", "protocol": "vless", "tag": "vless-grpc",
       "settings": {"clients": [{"id": "cxlvin777"}], "decryption": "none"},
       "streamSettings": {"network": "grpc", "grpcSettings": {"serviceName": "cxlvinvl-grpc"}, "sockopt": {"tcpFastOpen": true, "tcpNoDelay": true, "tcpKeepAliveInterval": 15}},
       "sniffing": {"enabled": true, "destOverride": ["http", "tls"]}
     },
     {
-      "port": 12004, "listen": "::", "protocol": "shadowsocks", "tag": "ss-grpc",
+      "port": 12004, "listen": "127.0.0.1", "protocol": "shadowsocks", "tag": "ss-grpc",
       "settings": {"clients": [{"password": "Cxlvin777", "method": "chacha20-ietf-poly1305"}]},
       "streamSettings": {"network": "grpc", "grpcSettings": {"serviceName": "cxlvinss-grpc"}, "sockopt": {"tcpFastOpen": true, "tcpNoDelay": true, "tcpKeepAliveInterval": 15}}
     }
