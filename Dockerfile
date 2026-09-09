@@ -11,7 +11,6 @@ ENV TZ=Asia/Shanghai
 
 COPY config.json /etc/xray.json
 COPY haproxy.cfg /usr/local/etc/haproxy/haproxy.cfg
-COPY index.html /usr/local/etc/haproxy/index.html
 
 EXPOSE 8080
 
