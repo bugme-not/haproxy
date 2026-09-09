@@ -14,7 +14,7 @@
         "network": "ws", "wsSettings": {"path": "/CxlvinTRWS"},
         "sockopt": {"tcpFastOpen": true, "tcpNoDelay": true, "tcpKeepAliveInterval": 15, "tcpKeepAliveIdle": 30, "tcpKeepAliveCount": 3, "tcpQuickAck": true, "tcpcongestion": "bbr"}
       },
-      "sniffing": {"enabled": true, "destOverride": ["http", "tls", "fakedns"]}
+      "sniffing": {"enabled": true, "destOverride": ["http", "tls"]}
     },
     {
       "port": 10002, "listen": "127.0.0.1", "protocol": "vless", "tag": "vless-ws",
@@ -23,7 +23,7 @@
         "network": "ws", "wsSettings": {"path": "/CxlvinVlWS"},
         "sockopt": {"tcpFastOpen": true, "tcpNoDelay": true, "tcpKeepAliveInterval": 15, "tcpKeepAliveIdle": 30, "tcpKeepAliveCount": 3, "tcpQuickAck": true, "tcpcongestion": "bbr"}
       },
-      "sniffing": {"enabled": true, "destOverride": ["http", "tls", "fakedns"]}
+      "sniffing": {"enabled": true, "destOverride": ["http", "tls"]}
     },
     {
       "port": 10003, "listen": "127.0.0.1", "protocol": "shadowsocks", "tag": "shadowsocks-ws",
@@ -32,7 +32,7 @@
         "network": "ws", "wsSettings": {"path": "/CxlvinSSWS"},
         "sockopt": {"tcpFastOpen": true, "tcpNoDelay": true, "tcpKeepAliveInterval": 15, "tcpKeepAliveIdle": 30, "tcpKeepAliveCount": 3, "tcpQuickAck": true, "tcpcongestion": "bbr"}
       },
-      "sniffing": {"enabled": true, "destOverride": ["http", "tls", "fakedns"]}
+      "sniffing": {"enabled": true, "destOverride": ["http", "tls"]}
     },
     {
       "port": 10004, "listen": "127.0.0.1", "protocol": "vmess", "tag": "vmess-ws",
@@ -41,7 +41,7 @@
         "network": "ws", "wsSettings": {"path": "/CxlvinVMWS"},
         "sockopt": {"tcpFastOpen": true, "tcpNoDelay": true, "tcpKeepAliveInterval": 15, "tcpKeepAliveIdle": 30, "tcpKeepAliveCount": 3, "tcpQuickAck": true, "tcpcongestion": "bbr"}
       },
-      "sniffing": {"enabled": true, "destOverride": ["http", "tls", "fakedns"]}
+      "sniffing": {"enabled": true, "destOverride": ["http", "tls"]}
     },
     {
       "port": 11001, "listen": "127.0.0.1", "protocol": "trojan", "tag": "trojan-hu",
@@ -50,7 +50,7 @@
         "network": "httpupgrade", "httpupgradeSettings": {"path": "/CxlvinTRHU"},
         "sockopt": {"tcpFastOpen": true, "tcpNoDelay": true, "tcpKeepAliveInterval": 15, "tcpKeepAliveIdle": 30, "tcpKeepAliveCount": 3, "tcpQuickAck": true, "tcpcongestion": "bbr"}
       },
-      "sniffing": {"enabled": true, "destOverride": ["http", "tls", "fakedns"]}
+      "sniffing": {"enabled": true, "destOverride": ["http", "tls"]}
     },
     {
       "port": 11002, "listen": "127.0.0.1", "protocol": "vless", "tag": "vless-hu",
@@ -59,7 +59,7 @@
         "network": "httpupgrade", "httpupgradeSettings": {"path": "/CxlvinVlHU"},
         "sockopt": {"tcpFastOpen": true, "tcpNoDelay": true, "tcpKeepAliveInterval": 15, "tcpKeepAliveIdle": 30, "tcpKeepAliveCount": 3, "tcpQuickAck": true, "tcpcongestion": "bbr"}
       },
-      "sniffing": {"enabled": true, "destOverride": ["http", "tls", "fakedns"]}
+      "sniffing": {"enabled": true, "destOverride": ["http", "tls"]}
     },
     {
       "port": 11003, "listen": "127.0.0.1", "protocol": "shadowsocks", "tag": "shadowsocks-hu",
@@ -68,7 +68,7 @@
         "network": "httpupgrade", "httpupgradeSettings": {"path": "/CxlvinSSHU"},
         "sockopt": {"tcpFastOpen": true, "tcpNoDelay": true, "tcpKeepAliveInterval": 15, "tcpKeepAliveIdle": 30, "tcpKeepAliveCount": 3, "tcpQuickAck": true, "tcpcongestion": "bbr"}
       },
-      "sniffing": {"enabled": true, "destOverride": ["http", "tls", "fakedns"]}
+      "sniffing": {"enabled": true, "destOverride": ["http", "tls"]}
     },
     {
       "port": 11004, "listen": "127.0.0.1", "protocol": "vmess", "tag": "vmess-hu",
@@ -77,7 +77,7 @@
         "network": "httpupgrade", "httpupgradeSettings": {"path": "/CxlvinVMHU"},
         "sockopt": {"tcpFastOpen": true, "tcpNoDelay": true, "tcpKeepAliveInterval": 15, "tcpKeepAliveIdle": 30, "tcpKeepAliveCount": 3, "tcpQuickAck": true, "tcpcongestion": "bbr"}
       },
-      "sniffing": {"enabled": true, "destOverride": ["http", "tls", "fakedns"]}
+      "sniffing": {"enabled": true, "destOverride": ["http", "tls"]}
     },
     {
       "port": 10010, "listen": "127.0.0.1", "protocol": "trojan", "tag": "trojan-xh",
@@ -86,7 +86,7 @@
         "network": "xhttp", "xhttpSettings": {"path": "/CxlvinTRXH", "mode": "auto"},
         "sockopt": {"tcpFastOpen": true, "tcpNoDelay": true, "tcpKeepAliveInterval": 15, "tcpKeepAliveIdle": 30, "tcpKeepAliveCount": 3, "tcpQuickAck": true, "tcpcongestion": "bbr"}
       },
-      "sniffing": {"enabled": true, "destOverride": ["http", "tls", "fakedns"]}
+      "sniffing": {"enabled": true, "destOverride": ["http", "tls"]}
     },
     {
       "port": 10009, "listen": "127.0.0.1", "protocol": "vless", "tag": "vless-xh",
@@ -95,7 +95,7 @@
         "network": "xhttp", "xhttpSettings": {"path": "/CxlvinVlXH", "mode": "auto"},
         "sockopt": {"tcpFastOpen": true, "tcpNoDelay": true, "tcpKeepAliveInterval": 15, "tcpKeepAliveIdle": 30, "tcpKeepAliveCount": 3, "tcpQuickAck": true, "tcpcongestion": "bbr"}
       },
-      "sniffing": {"enabled": true, "destOverride": ["http", "tls", "fakedns"]}
+      "sniffing": {"enabled": true, "destOverride": ["http", "tls"]}
     },
     {
       "port": 10012, "listen": "127.0.0.1", "protocol": "shadowsocks", "tag": "shadowsocks-xh",
@@ -104,7 +104,7 @@
         "network": "xhttp", "xhttpSettings": {"path": "/CxlvinSSXH", "mode": "auto"},
         "sockopt": {"tcpFastOpen": true, "tcpNoDelay": true, "tcpKeepAliveInterval": 15, "tcpKeepAliveIdle": 30, "tcpKeepAliveCount": 3, "tcpQuickAck": true, "tcpcongestion": "bbr"}
       },
-      "sniffing": {"enabled": true, "destOverride": ["http", "tls", "fakedns"]}
+      "sniffing": {"enabled": true, "destOverride": ["http", "tls"]}
     },
     {
       "port": 10011, "listen": "127.0.0.1", "protocol": "vmess", "tag": "vmess-xh",
@@ -113,7 +113,7 @@
         "network": "xhttp", "xhttpSettings": {"path": "/CxlvinVMXH", "mode": "auto"},
         "sockopt": {"tcpFastOpen": true, "tcpNoDelay": true, "tcpKeepAliveInterval": 15, "tcpKeepAliveIdle": 30, "tcpKeepAliveCount": 3, "tcpQuickAck": true, "tcpcongestion": "bbr"}
       },
-      "sniffing": {"enabled": true, "destOverride": ["http", "tls", "fakedns"]}
+      "sniffing": {"enabled": true, "destOverride": ["http", "tls"]}
     },
     {
       "port": 12001, "listen": "127.0.0.1", "protocol": "trojan", "tag": "trojan-grpc",
