@@ -12,6 +12,7 @@ RUN wget -qO /tmp/xray.zip https://github.com/XTLS/Xray-core/releases/latest/dow
 
 COPY config.json /etc/xray.json
 COPY haproxy.cfg /usr/local/etc/haproxy/haproxy.cfg
+COPY nginx.conf /etc/nginx/nginx.conf
 COPY index.html /var/lib/nginx/html/index.html
 
 EXPOSE 8080
