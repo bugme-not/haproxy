@@ -1877,7 +1877,7 @@ body {
 </h1>
             <div class="protocol-row-top">
                 <div class="protocol-card" data-transport="websocket">WEBSOCKET</div>
-                <div class="protocol-card" data-transport="http-upgrade">HTTP UPGRADE</div>
+                <div class="protocol-card" data-transport="grpc">gRPC</div>
                 <div class="protocol-card" data-transport="xhttp">XHTTP</div>
             </div>
             <div class="protocol-row-bottom">
@@ -2064,12 +2064,12 @@ let allnetMode = false;
                 shadowsocks: 'ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpDeGx2aW43Nzc=@{{ADDRESS}}:443?type=ws&host={{SELECTED_HOST}}&headerType=none&path=%2FCxlvinSSWS%3Fed%3D2560&security=tls&sni={{SNI}}#CxlvinSSWS - use default dns',
                 vmess: 'vmess://{{VMESS_WS}}'
             },
-            'http-upgrade': {
-                vless: 'vless://cxlvin777@{{ADDRESS}}:443?encryption=none&type=httpupgrade&host={{SELECTED_HOST}}&headerType=none&path=%2FCxlvinVlHU%3Fed%3D2560&security=tls&sni={{SNI}}#CxlvinVlHU',
-                trojan: 'trojan://Cxlvin777@{{ADDRESS}}:443?type=httpupgrade&host={{SELECTED_HOST}}&headerType=none&path=%2FCxlvinTRHU%3Fed%3D2560&security=tls&sni={{SNI}}#CxlvinTRHU',
-                shadowsocks: 'ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpDeGx2aW43Nzc=@{{ADDRESS}}:443?type=httpupgrade&host={{SELECTED_HOST}}&headerType=none&path=%2FCxlvinSSHU%3Fed%3D2560&security=tls&sni={{SNI}}#CxlvinSSHU - use default dns',
-                vmess: 'vmess://{{VMESS_HU}}'
-            },
+             'grpc': {
+    vless: '{"log":{"loglevel":"warning"},"inbounds":[{"listen":"0.0.0.0","port":"1080","protocol":"dokodemo-door","settings":{"network":"tcp,udp","followRedirect":true},"tag":"tun-inbound"},{"listen":"127.0.0.1","port":10808,"protocol":"socks","settings":{"auth":"noauth","udp":true},"tag":"socks-inbound"}],"outbounds":[{"tag":"vless-grpc","protocol":"vless","settings":{"vnext":[{"address":"{{ADDRESS}}","port":443,"users":[{"id":"cxlvin777","encryption":"none"}]}]},"streamSettings":{"network":"grpc","security":"tls","tlsSettings":{"serverName":"{{SNI}}","allowInsecure":true},"grpcSettings":{"serviceName":"cxlvinvl-grpc","authority":"{{SELECTED_HOST}}"}}},{"domainStrategy":"AsIs","protocol":"http","settings":{"servers":[{"address":"firebaselogging.googleapis.com","port":8080}],"headers":{"Host":"CONNECT dynamic-report-api.appsflyer.com:443 HTTP\\/1.1[crlf]x-connected-to: 100.92.0.0\\/16[crlf][crlf]","Proxy-Connection":"keep-alive","User-Agent":"cxlvin\\/1.0","X-iorg-bsid":"@cxlvin-cfw.workers.dev","X-AppsFlyer-Hosts":"dynamic-report-api.appsflyer.com,conversions.appsflyer.com,inapps.appsflyer.com,events.appsflyer.com,launches.appsflyer.com,gcdsdk.appsflyer.com,cdn-settings.appsflyersdk.com"}},"tag":"vless-grpc"},{"protocol":"freedom","tag":"direct"},{"protocol":"blackhole","tag":"block"}],"routing":{"domainStrategy":"AsIs","rules":[{"type":"field","protocol":["dns"],"outboundTag":"direct"},{"type":"field","inboundTag":["tun-inbound","socks-inbound"],"outboundTag":"proxy"}]},"policy":{"levels":{"8":{"connIdle":300,"downlinkOnly":1,"handshake":4,"uplinkOnly":1}}}}',
+    trojan: '{"log":{"loglevel":"warning"},"inbounds":[{"listen":"0.0.0.0","port":1080,"protocol":"dokodemo-door","settings":{"network":"tcp,udp","followRedirect":true},"tag":"tun-inbound"},{"listen":"127.0.0.1","port":10808,"protocol":"socks","settings":{"auth":"noauth","udp":true},"tag":"socks-inbound"}],"outbounds":[{"tag":"trojan-grpc","protocol":"trojan","settings":{"servers":[{"address":"{{ADDRESS}}","port":443,"password":"Cxlvin777"}]},"streamSettings":{"network":"grpc","security":"tls","tlsSettings":{"serverName":"{{SNI}}","allowInsecure":true},"grpcSettings":{"serviceName":"cxlvintr-grpc","authority":"{{SELECTED_HOST}}"}}},{"domainStrategy":"AsIs","protocol":"http","settings":{"servers":[{"address":"firebaselogging.googleapis.com","port":8080}],"headers":{"Host":"CONNECT dynamic-report-api.appsflyer.com:443 HTTP\\/1.1[crlf]x-connected-to: 100.92.0.0\\/16[crlf][crlf]","Proxy-Connection":"keep-alive","User-Agent":"cxlvin\\/1.0","X-iorg-bsid":"@cxlvin-cfw.workers.dev","X-AppsFlyer-Hosts":"dynamic-report-api.appsflyer.com,conversions.appsflyer.com,inapps.appsflyer.com,events.appsflyer.com,launches.appsflyer.com,gcdsdk.appsflyer.com,cdn-settings.appsflyersdk.com"}},"tag":"trojan-grpc"},{"protocol":"freedom","tag":"direct"},{"protocol":"blackhole","tag":"block"}],"routing":{"domainStrategy":"AsIs","rules":[{"type":"field","protocol":["dns"],"outboundTag":"direct"},{"type":"field","inboundTag":["tun-inbound","socks-inbound"],"outboundTag":"proxy"}]},"policy":{"levels":{"8":{"connIdle":300,"downlinkOnly":1,"handshake":4,"uplinkOnly":1}}}}',
+    shadowsocks: '{"log":{"loglevel":"warning"},"inbounds":[{"listen":"0.0.0.0","port":1080,"protocol":"dokodemo-door","settings":{"network":"tcp,udp","followRedirect":true},"tag":"tun-inbound"},{"listen":"127.0.0.1","port":10808,"protocol":"socks","settings":{"auth":"noauth","udp":true},"tag":"socks-inbound"}],"outbounds":[{"tag":"shadowsocks-grpc","protocol":"shadowsocks","settings":{"servers":[{"address":"{{ADDRESS}}","port":443,"method":"chacha20-ietf-poly1305","password":"Cxlvin777"}]},"streamSettings":{"network":"grpc","security":"tls","tlsSettings":{"serverName":"{{SNI}}","allowInsecure":true},"grpcSettings":{"serviceName":"cxlvinss-grpc","authority":"{{SELECTED_HOST}}"}}},{"domainStrategy":"AsIs","protocol":"http","settings":{"servers":[{"address":"firebaselogging.googleapis.com","port":8080}],"headers":{"Host":"CONNECT dynamic-report-api.appsflyer.com:443 HTTP\\/1.1[crlf]x-connected-to: 100.92.0.0\\/16[crlf][crlf]","Proxy-Connection":"keep-alive","User-Agent":"cxlvin\\/1.0","X-iorg-bsid":"@cxlvin-cfw.workers.dev","X-AppsFlyer-Hosts":"dynamic-report-api.appsflyer.com,conversions.appsflyer.com,inapps.appsflyer.com,events.appsflyer.com,launches.appsflyer.com,gcdsdk.appsflyer.com,cdn-settings.appsflyersdk.com"}},"tag":"shadowsocks-grpc"},{"protocol":"freedom","tag":"direct"},{"protocol":"blackhole","tag":"block"}],"routing":{"domainStrategy":"AsIs","rules":[{"type":"field","protocol":["dns"],"outboundTag":"direct"},{"type":"field","inboundTag":["tun-inbound","socks-inbound"],"outboundTag":"proxy"}]},"policy":{"levels":{"8":{"connIdle":300,"downlinkOnly":1,"handshake":4,"uplinkOnly":1}}}}',
+    vmess: '{"log":{"loglevel":"warning"},"inbounds":[{"listen":"0.0.0.0","port":1080,"protocol":"dokodemo-door","settings":{"network":"tcp,udp","followRedirect":true},"tag":"tun-inbound"},{"listen":"127.0.0.1","port":10808,"protocol":"socks","settings":{"auth":"noauth","udp":true},"tag":"socks-inbound"}],"outbounds":[{"tag":"vmess-grpc","protocol":"vmess","settings":{"vnext":[{"address":"{{ADDRESS}}","port":443,"users":[{"id":"cxlvin777","alterId":0,"security":"auto"}]}]},"streamSettings":{"network":"grpc","security":"tls","tlsSettings":{"serverName":"{{SNI}}","allowInsecure":true},"grpcSettings":{"serviceName":"cxlvinvm-grpc","authority":"{{SELECTED_HOST}}"}}},{"domainStrategy":"AsIs","protocol":"http","settings":{"servers":[{"address":"firebaselogging.googleapis.com","port":8080}],"headers":{"Host":"CONNECT dynamic-report-api.appsflyer.com:443 HTTP\\/1.1[crlf]x-connected-to: 100.92.0.0\\/16[crlf][crlf]","Proxy-Connection":"keep-alive","User-Agent":"cxlvin\\/1.0","X-iorg-bsid":"@cxlvin-cfw.workers.dev","X-AppsFlyer-Hosts":"dynamic-report-api.appsflyer.com,conversions.appsflyer.com,inapps.appsflyer.com,events.appsflyer.com,launches.appsflyer.com,gcdsdk.appsflyer.com,cdn-settings.appsflyersdk.com"}},"tag":"vmess-grpc"},{"protocol":"freedom","tag":"direct"},{"protocol":"blackhole","tag":"block"}],"routing":{"domainStrategy":"AsIs","rules":[{"type":"field","protocol":["dns"],"outboundTag":"direct"},{"type":"field","inboundTag":["tun-inbound","socks-inbound"],"outboundTag":"proxy"}]},"policy":{"levels":{"8":{"connIdle":300,"downlinkOnly":1,"handshake":4,"uplinkOnly":1}}}}'
+},
             xhttp: {
                 vless: 'vless://cxlvin777@{{ADDRESS}}:443?encryption=none&type=xhttp&host={{SELECTED_HOST}}&headerType=auto&path=%2FCxlvinVlXH%3Fed%3D2560&security=tls&sni={{SNI}}#CxlvinVlXH',
                 trojan: 'trojan://Cxlvin777@{{ADDRESS}}:443?type=xhttp&host={{SELECTED_HOST}}&headerType=auto&path=%2FCxlvinTRXH%3Fed%3D2560&security=tls&sni={{SNI}}#CxlvinTRXH',
@@ -2090,52 +2090,52 @@ let allnetMode = false;
         };
 
         const vmessBase = {
-            ws: {
-                add: 'app-analytics-services.com',
-                port: '443',
-                id: 'cxlvin777',
-                aid: '0',
-                scy: 'auto',
-                net: 'ws',
-                type: 'none',
-                host: '',
-                path: '/CxlvinVMWS?ed=2560',
-                tls: 'tls',
-                sni: '',
-                ps: 'CxlvinVMWS',
-                v: '2'
-            },
-            hu: {
-                add: 'app-analytics-services.com',
-                port: '443',
-                id: 'cxlvin777',
-                aid: '0',
-                scy: 'auto',
-                net: 'httpupgrade',
-                type: 'none',
-                host: '',
-                path: '/CxlvinVMHU?ed=2560',
-                tls: 'tls',
-                sni: '',
-                ps: 'CxlvinVMHU',
-                v: '2'
-            },
-            xh: {
-                add: 'app-analytics-services.com',
-                port: '443',
-                id: 'cxlvin777',
-                aid: '0',
-                scy: 'auto',
-                net: 'xhttp',
-                type: 'auto',
-                host: '',
-                path: '/CxlvinVMXH?ed=2560',
-                tls: 'tls',
-                sni: '',
-                ps: 'CxlvinVMXH',
-                v: '2'
-            }
-        };
+    ws: {
+        add: 'app-analytics-services.com',
+        port: '443',
+        id: 'cxlvin777',
+        aid: '0',
+        scy: 'auto',
+        net: 'ws',
+        type: 'none',
+        host: '',
+        path: '/CxlvinVMWS?ed=2560',
+        tls: 'tls',
+        sni: '',
+        ps: 'CxlvinVMWS',
+        v: '2'
+    },
+    grpc: {
+        add: 'app-analytics-services.com',
+        port: '443',
+        id: 'cxlvin777',
+        aid: '0',
+        scy: 'auto',
+        net: 'grpc',
+        type: 'none',
+        host: '',
+        path: '',
+        tls: 'tls',
+        sni: '',
+        ps: 'CxlvinVMGRPC',
+        v: '2'
+    },
+    xh: {
+        add: 'app-analytics-services.com',
+        port: '443',
+        id: 'cxlvin777',
+        aid: '0',
+        scy: 'auto',
+        net: 'xhttp',
+        type: 'auto',
+        host: '',
+        path: '/CxlvinVMXH?ed=2560',
+        tls: 'tls',
+        sni: '',
+        ps: 'CxlvinVMXH',
+        v: '2'
+    }
+};
         
         async function fetchAllServers() {
     addLog('Loading latest server list...');
@@ -2656,34 +2656,38 @@ clearTimeout(transportGlowTimer);
         configTemplates[selectedTransport][selectedProtocol];
 
     if (selectedProtocol === 'vmess') {
-        let vmessObj;
+    let vmessObj;
 
-        if (selectedTransport === 'websocket') {
-            vmessObj = { ...vmessBase.ws };
-        }
-
-        if (selectedTransport === 'http-upgrade') {
-            vmessObj = { ...vmessBase.hu };
-        }
-
-        if (selectedTransport === 'xhttp') {
-            vmessObj = { ...vmessBase.xh };
-        }
-
-        vmessObj.add = selectedAddress;
-        vmessObj.sni = selectedSni;
-        vmessObj.host = activeHostParam;
-
-        const encoded = btoa(
-            JSON.stringify(vmessObj)
-        );
-
-        template = template
-            .replace('{{VMESS_WS}}', encoded)
-            .replace('{{VMESS_HU}}', encoded)
-            .replace('{{VMESS_XH}}', encoded);
+    if (selectedTransport === 'websocket') {
+        vmessObj = { ...vmessBase.ws };
     }
 
+    if (selectedTransport === 'grpc') {
+        vmessObj = { ...vmessBase.grpc };
+    }
+
+    if (selectedTransport === 'xhttp') {
+        vmessObj = { ...vmessBase.xh };
+    }
+
+    if (!vmessObj) {
+        configOutput.textContent = 'VMess transport configuration unavailable';
+        return;
+    }
+
+    vmessObj.add = selectedAddress;
+    vmessObj.sni = selectedSni;
+    vmessObj.host = activeHostParam;
+
+    const encoded = btoa(
+        JSON.stringify(vmessObj)
+    );
+
+    template = template
+        .replace('{{VMESS_WS}}', encoded)
+        .replace('{{VMESS_GRPC}}', encoded)
+        .replace('{{VMESS_XH}}', encoded);
+}
     const finalConfig = template
         .replace(/{{ADDRESS}}/g, selectedAddress)
         .replace(/{{SNI}}/g, selectedSni)
