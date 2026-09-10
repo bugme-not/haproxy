@@ -145,10 +145,18 @@
       "settings": {"domainStrategy": "AsIs"},
       "streamSettings": {"sockopt": {"tcpFastOpen": true, "tcpNoDelay": true, "tcpKeepAliveInterval": 15, "tcpKeepAliveIdle": 30, "tcpKeepAliveCount": 3, "tcpQuickAck": true, "tcpcongestion": "bbr"}}
     },
-    {"protocol": "blackhole", "tag": "block"}
+    {
+      "protocol": "blackhole", "tag": "block"
+    }
   ],
   "routing": {
     "domainStrategy": "AsIs",
-    "rules": [{"type": "field", "inboundTag": ["trojan-ws","vless-ws","shadowsocks-ws","vmess-ws","trojan-hu","vless-hu","shadowsocks-hu","vmess-hu","trojan-xh","vless-xh","shadowsocks-xh","vmess-xh","trojan-grpc","vmess-grpc","vless-grpc","ss-grpc"], "outboundTag": "direct"}]
+    "rules": [
+      {
+        "type": "field",
+        "inboundTag": ["trojan-ws", "vless-ws", "shadowsocks-ws", "vmess-ws", "trojan-hu", "vless-hu", "shadowsocks-hu", "vmess-hu", "trojan-xh", "vless-xh", "shadowsocks-xh", "vmess-xh", "trojan-grpc", "vmess-grpc", "vless-grpc", "ss-grpc"],
+        "outboundTag": "direct"
+      }
+    ]
   }
 }
