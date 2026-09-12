@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   aetherx:
-    image: ima0hw/h4proxy:latest
+    image: ima0hw/h4pr0xy:latest
     container_name: haproxy
     network_mode: host
     restart: always
