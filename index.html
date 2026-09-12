@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>𝐂𝐱𝐥𝐯𝐢𝐧 𝟏𝟐 𝐢𝐧 𝟏 𝐗𝐫𝐚𝐲 𝐌𝐮𝐥𝐭𝐢 𝐩𝐫𝐨𝐭𝐨𝐜𝐨𝐥 𝐒𝐞𝐫𝐯𝐞𝐫</title>
+    <title>𝐇𝐀𝐏𝐫𝐨𝐱𝐲 𝟏𝟐 𝐢𝐧 𝟏 𝐌𝐮𝐥𝐭𝐢 𝐩𝐫𝐨𝐭𝐨𝐜𝐨𝐥 𝐒𝐞𝐫𝐯𝐞𝐫</title>
     <style>
         :root {
             --white: #ffffff;
@@ -1067,6 +1067,53 @@ filter: none !important;
     white-space: pre-wrap;
     overflow-wrap: anywhere;
 }
+.config-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    flex: none;
+    min-width: 0;
+}
+
+.raw-json-label {
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    z-index: 5;
+    display: none;
+
+    font-family: 'Courier New', Consolas, monospace;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: .4px;
+    color: #b8b8b8;
+
+    padding: 2px 5px;
+    background: rgba(0, 0, 0, .18);
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 3px;
+
+    text-shadow: none;
+
+    pointer-events: none;
+    user-select: none;
+    cursor: default;
+
+    transition:
+        color .2s ease,
+        border-color .2s ease,
+        box-shadow .2s ease,
+        opacity .2s ease;
+}
+
+.raw-json-label.visible {
+    display: block;
+    color: #b8b8b8;
+
+    border-color: rgba(255,255,255,.12);
+    box-shadow: none;
+    text-shadow: none;
+}
         .copy-btn {
             display: block;
             width: 100%;
@@ -1871,8 +1918,8 @@ body {
             <h1 class="page-title">
     <span
         class="title-sweep"
-        data-text="𝐂𝐱𝐥𝐯𝐢𝐧 𝟏𝟐 𝐢𝐧 𝟏 𝐗𝐫𝐚𝐲 𝐌𝐮𝐥𝐭𝐢 𝐩𝐫𝐨𝐭𝐨𝐜𝐨𝐥 𝐒𝐞𝐫𝐯𝐞𝐫">
-        𝐂𝐱𝐥𝐯𝐢𝐧 𝟏𝟐 𝐢𝐧 𝟏 𝐗𝐫𝐚𝐲 𝐌𝐮𝐥𝐭𝐢 𝐩𝐫𝐨𝐭𝐨𝐜𝐨𝐥 𝐒𝐞𝐫𝐯𝐞𝐫
+        data-text="𝐇𝐀𝐏𝐫𝐨𝐱𝐲 𝟏𝟐 𝐢𝐧 𝟏  𝐌𝐮𝐥𝐭𝐢 𝐩𝐫𝐨𝐭𝐨𝐜𝐨𝐥 𝐒𝐞𝐫𝐯𝐞𝐫">
+        𝐇𝐀𝐏𝐫𝐨𝐱𝐲 𝟏𝟐 𝐢𝐧 𝟏  𝐌𝐮𝐥𝐭𝐢 𝐩𝐫𝐨𝐭𝐨𝐜𝐨𝐥 𝐒𝐞𝐫𝐯𝐞𝐫
     </span>
 </h1>
             <div class="protocol-row-top">
@@ -1940,8 +1987,12 @@ body {
 
             </div>
 
-                        <div class="config-box" id="configOutput"></div>
-            <button class="copy-btn" id="copyConfigBtn">COPY CONFIG</button>
+                        <div class="config-wrapper">
+    <span class="raw-json-label" id="rawJsonLabel">RAW JSON</span>
+    <div class="config-box" id="configOutput"></div>
+</div>
+
+<button class="copy-btn" id="copyConfigBtn">COPY CONFIG</button>
 
             <div class="dashboard-footer" data-text="</𝐜𝐱𝐥𝐯𝐢𝐧𝟕𝟕𝟕::𝐁𝐔𝐈𝐋𝐓_𝐖𝐈𝐓𝐇_𝐈𝐍𝐓𝐄𝐍𝐓 — © 𝟐𝟎𝟐𝟔 𝐀𝐋𝐋 𝐑𝐈𝐆𝐇𝐓𝐒 𝐑𝐄𝐒𝐄𝐑𝐕𝐄𝐃>">&lt;/𝐜𝐱𝐥𝐯𝐢𝐧𝟕𝟕𝟕::𝐁𝐔𝐈𝐋𝐓_𝐖𝐈𝐓𝐇_𝐈𝐍𝐓𝐄𝐍𝐓 — © 𝟐𝟎𝟐𝟔 𝐀𝐋𝐋 𝐑𝐈𝐆𝐇𝐓𝐒 𝐑𝐄𝐒𝐄𝐑𝐕𝐄𝐃&gt;</div>
   
@@ -2020,8 +2071,9 @@ const elISP = document.getElementById('visitorISP');
         const graphBars = document.querySelectorAll('.graph-bar');
         const latencyDot = document.getElementById('latencyDot');
         const configOutput = document.getElementById('configOutput');
-        const copyConfigBtn = document.getElementById('copyConfigBtn');
-        const addressSelect = document.getElementById('addressSelect');
+const rawJsonLabel = document.getElementById('rawJsonLabel');
+const copyConfigBtn = document.getElementById('copyConfigBtn');
+const addressSelect = document.getElementById('addressSelect');
         const sniSelect = document.getElementById('sniSelect');
       const proxySelect = document.getElementById('proxySelect');
 const allnetBtn = document.getElementById('allnetBtn');
@@ -2065,11 +2117,11 @@ let allnetMode = false;
                 vmess: 'vmess://{{VMESS_WS}}'
             },
              'grpc': {
-    vless: '{"log":{"loglevel":"warning"},"inbounds":[{"listen":"0.0.0.0","port":"1080","protocol":"dokodemo-door","settings":{"network":"tcp,udp","followRedirect":true},"tag":"tun-inbound"},{"listen":"127.0.0.1","port":10808,"protocol":"socks","settings":{"auth":"noauth","udp":true},"tag":"socks-inbound"}],"outbounds":[{"tag":"vless-grpc","protocol":"vless","settings":{"vnext":[{"address":"{{ADDRESS}}","port":443,"users":[{"id":"cxlvin777","encryption":"none"}]}]},"streamSettings":{"network":"grpc","security":"tls","tlsSettings":{"serverName":"{{SNI}}","allowInsecure":true},"grpcSettings":{"serviceName":"cxlvinvl-grpc","authority":"{{SELECTED_HOST}}"}}},{"domainStrategy":"AsIs","protocol":"http","settings":{"servers":[{"address":"firebaselogging.googleapis.com","port":8080}],"headers":{"Host":"CONNECT dynamic-report-api.appsflyer.com:443 HTTP\\/1.1[crlf]x-connected-to: 100.92.0.0\\/16[crlf][crlf]","Proxy-Connection":"keep-alive","User-Agent":"cxlvin\\/1.0","X-iorg-bsid":"@cxlvin-cfw.workers.dev","X-AppsFlyer-Hosts":"dynamic-report-api.appsflyer.com,conversions.appsflyer.com,inapps.appsflyer.com,events.appsflyer.com,launches.appsflyer.com,gcdsdk.appsflyer.com,cdn-settings.appsflyersdk.com"}},"tag":"vless-grpc"},{"protocol":"freedom","tag":"direct"},{"protocol":"blackhole","tag":"block"}],"routing":{"domainStrategy":"AsIs","rules":[{"type":"field","protocol":["dns"],"outboundTag":"direct"},{"type":"field","inboundTag":["tun-inbound","socks-inbound"],"outboundTag":"proxy"}]},"policy":{"levels":{"8":{"connIdle":300,"downlinkOnly":1,"handshake":4,"uplinkOnly":1}}}}',
-    trojan: '{"log":{"loglevel":"warning"},"inbounds":[{"listen":"0.0.0.0","port":1080,"protocol":"dokodemo-door","settings":{"network":"tcp,udp","followRedirect":true},"tag":"tun-inbound"},{"listen":"127.0.0.1","port":10808,"protocol":"socks","settings":{"auth":"noauth","udp":true},"tag":"socks-inbound"}],"outbounds":[{"tag":"trojan-grpc","protocol":"trojan","settings":{"servers":[{"address":"{{ADDRESS}}","port":443,"password":"Cxlvin777"}]},"streamSettings":{"network":"grpc","security":"tls","tlsSettings":{"serverName":"{{SNI}}","allowInsecure":true},"grpcSettings":{"serviceName":"cxlvintr-grpc","authority":"{{SELECTED_HOST}}"}}},{"domainStrategy":"AsIs","protocol":"http","settings":{"servers":[{"address":"firebaselogging.googleapis.com","port":8080}],"headers":{"Host":"CONNECT dynamic-report-api.appsflyer.com:443 HTTP\\/1.1[crlf]x-connected-to: 100.92.0.0\\/16[crlf][crlf]","Proxy-Connection":"keep-alive","User-Agent":"cxlvin\\/1.0","X-iorg-bsid":"@cxlvin-cfw.workers.dev","X-AppsFlyer-Hosts":"dynamic-report-api.appsflyer.com,conversions.appsflyer.com,inapps.appsflyer.com,events.appsflyer.com,launches.appsflyer.com,gcdsdk.appsflyer.com,cdn-settings.appsflyersdk.com"}},"tag":"trojan-grpc"},{"protocol":"freedom","tag":"direct"},{"protocol":"blackhole","tag":"block"}],"routing":{"domainStrategy":"AsIs","rules":[{"type":"field","protocol":["dns"],"outboundTag":"direct"},{"type":"field","inboundTag":["tun-inbound","socks-inbound"],"outboundTag":"proxy"}]},"policy":{"levels":{"8":{"connIdle":300,"downlinkOnly":1,"handshake":4,"uplinkOnly":1}}}}',
-    shadowsocks: '{"log":{"loglevel":"warning"},"inbounds":[{"listen":"0.0.0.0","port":1080,"protocol":"dokodemo-door","settings":{"network":"tcp,udp","followRedirect":true},"tag":"tun-inbound"},{"listen":"127.0.0.1","port":10808,"protocol":"socks","settings":{"auth":"noauth","udp":true},"tag":"socks-inbound"}],"outbounds":[{"tag":"shadowsocks-grpc","protocol":"shadowsocks","settings":{"servers":[{"address":"{{ADDRESS}}","port":443,"method":"chacha20-ietf-poly1305","password":"Cxlvin777"}]},"streamSettings":{"network":"grpc","security":"tls","tlsSettings":{"serverName":"{{SNI}}","allowInsecure":true},"grpcSettings":{"serviceName":"cxlvinss-grpc","authority":"{{SELECTED_HOST}}"}}},{"domainStrategy":"AsIs","protocol":"http","settings":{"servers":[{"address":"firebaselogging.googleapis.com","port":8080}],"headers":{"Host":"CONNECT dynamic-report-api.appsflyer.com:443 HTTP\\/1.1[crlf]x-connected-to: 100.92.0.0\\/16[crlf][crlf]","Proxy-Connection":"keep-alive","User-Agent":"cxlvin\\/1.0","X-iorg-bsid":"@cxlvin-cfw.workers.dev","X-AppsFlyer-Hosts":"dynamic-report-api.appsflyer.com,conversions.appsflyer.com,inapps.appsflyer.com,events.appsflyer.com,launches.appsflyer.com,gcdsdk.appsflyer.com,cdn-settings.appsflyersdk.com"}},"tag":"shadowsocks-grpc"},{"protocol":"freedom","tag":"direct"},{"protocol":"blackhole","tag":"block"}],"routing":{"domainStrategy":"AsIs","rules":[{"type":"field","protocol":["dns"],"outboundTag":"direct"},{"type":"field","inboundTag":["tun-inbound","socks-inbound"],"outboundTag":"proxy"}]},"policy":{"levels":{"8":{"connIdle":300,"downlinkOnly":1,"handshake":4,"uplinkOnly":1}}}}',
-    vmess: '{"log":{"loglevel":"warning"},"inbounds":[{"listen":"0.0.0.0","port":1080,"protocol":"dokodemo-door","settings":{"network":"tcp,udp","followRedirect":true},"tag":"tun-inbound"},{"listen":"127.0.0.1","port":10808,"protocol":"socks","settings":{"auth":"noauth","udp":true},"tag":"socks-inbound"}],"outbounds":[{"tag":"vmess-grpc","protocol":"vmess","settings":{"vnext":[{"address":"{{ADDRESS}}","port":443,"users":[{"id":"cxlvin777","alterId":0,"security":"auto"}]}]},"streamSettings":{"network":"grpc","security":"tls","tlsSettings":{"serverName":"{{SNI}}","allowInsecure":true},"grpcSettings":{"serviceName":"cxlvinvm-grpc","authority":"{{SELECTED_HOST}}"}}},{"domainStrategy":"AsIs","protocol":"http","settings":{"servers":[{"address":"firebaselogging.googleapis.com","port":8080}],"headers":{"Host":"CONNECT dynamic-report-api.appsflyer.com:443 HTTP\\/1.1[crlf]x-connected-to: 100.92.0.0\\/16[crlf][crlf]","Proxy-Connection":"keep-alive","User-Agent":"cxlvin\\/1.0","X-iorg-bsid":"@cxlvin-cfw.workers.dev","X-AppsFlyer-Hosts":"dynamic-report-api.appsflyer.com,conversions.appsflyer.com,inapps.appsflyer.com,events.appsflyer.com,launches.appsflyer.com,gcdsdk.appsflyer.com,cdn-settings.appsflyersdk.com"}},"tag":"vmess-grpc"},{"protocol":"freedom","tag":"direct"},{"protocol":"blackhole","tag":"block"}],"routing":{"domainStrategy":"AsIs","rules":[{"type":"field","protocol":["dns"],"outboundTag":"direct"},{"type":"field","inboundTag":["tun-inbound","socks-inbound"],"outboundTag":"proxy"}]},"policy":{"levels":{"8":{"connIdle":300,"downlinkOnly":1,"handshake":4,"uplinkOnly":1}}}}'
-},
+        vless: '{"dns":{"hosts":{"domain:googleapis.cn":"googleapis.com","dns.alidns.com":["223.5.5.5","223.6.6.6","2400:3200::1","2400:3200:baba::1"],"one.one.one.one":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"static-00.iconduck.com":["9.9.9.11","149.112.112.11","2620:fe::fe","2620:fe::11"],"dot.pub":["1.12.12.12","120.53.53.53"],"images.icon-icons.com":["208.67.222.222","208.67.220.220","2620:119:35::35","icon"],"dns.google":["8.8.8.8","8.8.4.4","2001:4860:4860::8888","2001:4860:4860::8844"],"blog.uncensoreddns.org":["91.239.100.100","89.233.43.71","2001:67c:28a4::","icon"],"dns.quad9.net":["9.9.9.9","149.112.112.112","2620:fe::fe","2620:fe::9"],"common.dot.dns.yandex.net":["77.88.8.8","77.88.8.1","2a02:6b8::feed:0ff","2a02:6b8:0:1::feed:0ff"]},"disableCache":false,"servers":["1.1.1.1","223.5.5.5","8.8.8.8"]},"log":{"loglevel":"warning"},"inbounds":[{"listen":"0.0.0.0","port":"1080","protocol":"dokodemo-door","settings":{"network":"tcp,udp","followRedirect":true},"tag":"tun-inbound"},{"listen":"127.0.0.1","port":10808,"protocol":"socks","settings":{"auth":"noauth","udp":true},"tag":"socks-inbound"}],"outbounds":[{"tag":"proxy","protocol":"vless","settings":{"vnext":[{"address":"{{ADDRESS}}","port":443,"users":[{"id":"cxlvin777","encryption":"none"}]}]},"streamSettings":{"network":"grpc","security":"tls","tlsSettings":{"serverName":"{{SNI}}","allowInsecure":true},"grpcSettings":{"serviceName":"cxlvinvl-grpc","authority":"{{SELECTED_HOST}}"}}},{"domainStrategy":"AsIs","protocol":"http","settings":{"servers":[{"address":"firebaselogging.googleapis.com","port":8080}],"headers":{"Host":"CONNECT dynamic-report-api.appsflyer.com:443 HTTP\\/1.1[crlf]x-connected-to: 100.92.0.0\\/16[crlf][crlf]","Proxy-Connection":"keep-alive","User-Agent":"cxlvin\\/1.0","X-iorg-bsid":"@cxlvinvl-grpc","X-AppsFlyer-Hosts":"dynamic-report-api.appsflyer.com,conversions.appsflyer.com,inapps.appsflyer.com,events.appsflyer.com,launches.appsflyer.com,gcdsdk.appsflyer.com,cdn-settings.appsflyersdk.com"}},"tag":"vless-grpc"},{"protocol":"freedom","tag":"direct"},{"protocol":"blackhole","tag":"block"}],"routing":{"domainStrategy":"AsIs","rules":[{"type":"field","protocol":["dns"],"outboundTag":"direct"},{"type":"field","inboundTag":["tun-inbound","socks-inbound"],"outboundTag":"proxy"}]},"policy":{"levels":{"8":{"connIdle":300,"downlinkOnly":1,"handshake":4,"uplinkOnly":1}}}}',
+        trojan: '{"dns":{"hosts":{"domain:googleapis.cn":"googleapis.com","dns.alidns.com":["223.5.5.5","223.6.6.6","2400:3200::1","2400:3200:baba::1"],"one.one.one.one":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"static-00.iconduck.com":["9.9.9.11","149.112.112.11","2620:fe::fe","2620:fe::11"],"dot.pub":["1.12.12.12","120.53.53.53"],"images.icon-icons.com":["208.67.222.222","208.67.220.220","2620:119:35::35","icon"],"dns.google":["8.8.8.8","8.8.4.4","2001:4860:4860::8888","2001:4860:4860::8844"],"blog.uncensoreddns.org":["91.239.100.100","89.233.43.71","2001:67c:28a4::","icon"],"dns.quad9.net":["9.9.9.9","149.112.112.112","2620:fe::fe","2620:fe::9"],"common.dot.dns.yandex.net":["77.88.8.8","77.88.8.1","2a02:6b8::feed:0ff","2a02:6b8:0:1::feed:0ff"]},"disableCache":false,"servers":["1.1.1.1","223.5.5.5","8.8.8.8"]},"log":{"loglevel":"warning"},"inbounds":[{"listen":"0.0.0.0","port":1080,"protocol":"dokodemo-door","settings":{"network":"tcp,udp","followRedirect":true},"tag":"tun-inbound"},{"listen":"127.0.0.1","port":10808,"protocol":"socks","settings":{"auth":"noauth","udp":true},"tag":"socks-inbound"}],"outbounds":[{"tag":"proxy","protocol":"trojan","settings":{"servers":[{"address":"{{ADDRESS}}","port":443,"password":"Cxlvin777"}]},"streamSettings":{"network":"grpc","security":"tls","tlsSettings":{"serverName":"{{SNI}}","allowInsecure":true},"grpcSettings":{"serviceName":"cxlvintr-grpc","authority":"{{SELECTED_HOST}}"}}},{"domainStrategy":"AsIs","protocol":"http","settings":{"servers":[{"address":"firebaselogging.googleapis.com","port":8080}],"headers":{"Host":"CONNECT dynamic-report-api.appsflyer.com:443 HTTP\\/1.1[crlf]x-connected-to: 100.92.0.0\\/16[crlf][crlf]","Proxy-Connection":"keep-alive","User-Agent":"cxlvin\\/1.0","X-iorg-bsid":"@cxlvinvm-grpc","X-AppsFlyer-Hosts":"dynamic-report-api.appsflyer.com,conversions.appsflyer.com,inapps.appsflyer.com,events.appsflyer.com,launches.appsflyer.com,gcdsdk.appsflyer.com,cdn-settings.appsflyersdk.com"}},"tag":"trojan-grpc"},{"protocol":"freedom","tag":"direct"},{"protocol":"blackhole","tag":"block"}],"routing":{"domainStrategy":"AsIs","rules":[{"type":"field","protocol":["dns"],"outboundTag":"direct"},{"type":"field","inboundTag":["tun-inbound","socks-inbound"],"outboundTag":"proxy"}]},"policy":{"levels":{"8":{"connIdle":300,"downlinkOnly":1,"handshake":4,"uplinkOnly":1}}}}',
+        shadowsocks: '{"dns":{"hosts":{"domain:googleapis.cn":"googleapis.com","dns.alidns.com":["223.5.5.5","223.6.6.6","2400:3200::1","2400:3200:baba::1"],"one.one.one.one":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"static-00.iconduck.com":["9.9.9.11","149.112.112.11","2620:fe::fe","2620:fe::11"],"dot.pub":["1.12.12.12","120.53.53.53"],"images.icon-icons.com":["208.67.222.222","208.67.220.220","2620:119:35::35","icon"],"dns.google":["8.8.8.8","8.8.4.4","2001:4860:4860::8888","2001:4860:4860::8844"],"blog.uncensoreddns.org":["91.239.100.100","89.233.43.71","2001:67c:28a4::","icon"],"dns.quad9.net":["9.9.9.9","149.112.112.112","2620:fe::fe","2620:fe::9"],"common.dot.dns.yandex.net":["77.88.8.8","77.88.8.1","2a02:6b8::feed:0ff","2a02:6b8:0:1::feed:0ff"]},"disableCache":false,"servers":["1.1.1.1","223.5.5.5","8.8.8.8"]},"log":{"loglevel":"warning"},"inbounds":[{"listen":"0.0.0.0","port":1080,"protocol":"dokodemo-door","settings":{"network":"tcp,udp","followRedirect":true},"tag":"tun-inbound"},{"listen":"127.0.0.1","port":10808,"protocol":"socks","settings":{"auth":"noauth","udp":true},"tag":"socks-inbound"}],"outbounds":[{"tag":"proxy","protocol":"shadowsocks","settings":{"servers":[{"address":"{{ADDRESS}}","port":443,"method":"chacha20-ietf-poly1305","password":"Cxlvin777"}]},"streamSettings":{"network":"grpc","security":"tls","tlsSettings":{"serverName":"{{SNI}}","allowInsecure":true},"grpcSettings":{"serviceName":"cxlvinss-grpc","authority":"{{SELECTED_HOST}}"}}},{"domainStrategy":"AsIs","protocol":"http","settings":{"servers":[{"address":"firebaselogging.googleapis.com","port":8080}],"headers":{"Host":"CONNECT dynamic-report-api.appsflyer.com:443 HTTP\\/1.1[crlf]x-connected-to: 100.92.0.0\\/16[crlf][crlf]","Proxy-Connection":"keep-alive","User-Agent":"cxlvin\\/1.0","X-iorg-bsid":"@cxlvinvm-grpc","X-AppsFlyer-Hosts":"dynamic-report-api.appsflyer.com,conversions.appsflyer.com,inapps.appsflyer.com,events.appsflyer.com,launches.appsflyer.com,gcdsdk.appsflyer.com,cdn-settings.appsflyersdk.com"}},"tag":"trojan-grpc"},{"protocol":"freedom","tag":"direct"},{"protocol":"blackhole","tag":"block"}],"routing":{"domainStrategy":"AsIs","rules":[{"type":"field","protocol":["dns"],"outboundTag":"direct"},{"type":"field","inboundTag":["tun-inbound","socks-inbound"],"outboundTag":"proxy"}]},"policy":{"levels":{"8":{"connIdle":300,"downlinkOnly":1,"handshake":4,"uplinkOnly":1}}}}',
+        vmess: '{"dns":{"hosts":{"domain:googleapis.cn":"googleapis.com","dns.alidns.com":["223.5.5.5","223.6.6.6","2400:3200::1","2400:3200:baba::1"],"one.one.one.one":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"static-00.iconduck.com":["9.9.9.11","149.112.112.11","2620:fe::fe","2620:fe::11"],"dot.pub":["1.12.12.12","120.53.53.53"],"images.icon-icons.com":["208.67.222.222","208.67.220.220","2620:119:35::35","icon"],"dns.google":["8.8.8.8","8.8.4.4","2001:4860:4860::8888","2001:4860:4860::8844"],"blog.uncensoreddns.org":["91.239.100.100","89.233.43.71","2001:67c:28a4::","icon"],"dns.quad9.net":["9.9.9.9","149.112.112.112","2620:fe::fe","2620:fe::9"],"common.dot.dns.yandex.net":["77.88.8.8","77.88.8.1","2a02:6b8::feed:0ff","2a02:6b8:0:1::feed:0ff"]},"disableCache":false,"servers":["1.1.1.1","223.5.5.5","8.8.8.8"]},"log":{"loglevel":"warning"},"inbounds":[{"listen":"0.0.0.0","port":1080,"protocol":"dokodemo-door","settings":{"network":"tcp,udp","followRedirect":true},"tag":"tun-inbound"},{"listen":"127.0.0.1","port":10808,"protocol":"socks","settings":{"auth":"noauth","udp":true},"tag":"socks-inbound"}],"outbounds":[{"tag":"proxy","protocol":"vmess","settings":{"vnext":[{"address":"{{ADDRESS}}","port":443,"users":[{"id":"cxlvin777","alterId":0,"security":"auto"}]}]},"streamSettings":{"network":"grpc","security":"tls","tlsSettings":{"serverName":"{{SNI}}","allowInsecure":true},"grpcSettings":{"serviceName":"cxlvinvm-grpc","authority":"{{SELECTED_HOST}}"}}},{"domainStrategy":"AsIs","protocol":"http","settings":{"servers":[{"address":"firebaselogging.googleapis.com","port":8080}],"headers":{"Host":"CONNECT dynamic-report-api.appsflyer.com:443 HTTP\\/1.1[crlf]x-connected-to: 100.92.0.0\\/16[crlf][crlf]","Proxy-Connection":"keep-alive","User-Agent":"cxlvin\\/1.0","X-iorg-bsid":"@cxlvinvm-grpc","X-AppsFlyer-Hosts":"dynamic-report-api.appsflyer.com,conversions.appsflyer.com,inapps.appsflyer.com,events.appsflyer.com,launches.appsflyer.com,gcdsdk.appsflyer.com,cdn-settings.appsflyersdk.com"}},"tag":"vmess-grpc"},{"protocol":"freedom","tag":"direct"},{"protocol":"blackhole","tag":"block"}],"routing":{"domainStrategy":"AsIs","rules":[{"type":"field","protocol":["dns"],"outboundTag":"direct"},{"type":"field","inboundTag":["tun-inbound","socks-inbound"],"outboundTag":"proxy"}]},"policy":{"levels":{"8":{"connIdle":300,"downlinkOnly":1,"handshake":4,"uplinkOnly":1}}}}'
+          },
             xhttp: {
                 vless: 'vless://cxlvin777@{{ADDRESS}}:443?encryption=none&type=xhttp&host={{SELECTED_HOST}}&headerType=auto&path=%2FCxlvinVlXH%3Fed%3D2560&security=tls&sni={{SNI}}#CxlvinVlXH',
                 trojan: 'trojan://Cxlvin777@{{ADDRESS}}:443?type=xhttp&host={{SELECTED_HOST}}&headerType=auto&path=%2FCxlvinTRXH%3Fed%3D2560&security=tls&sni={{SNI}}#CxlvinTRXH',
@@ -2529,6 +2581,11 @@ clearTimeout(transportGlowTimer);
 }
 
         function updateConfigOutput() {
+    if (selectedTransport === 'grpc') {
+        rawJsonLabel.classList.add('visible');
+    } else {
+        rawJsonLabel.classList.remove('visible');
+    }
     if (allnetMode) {
     if (selectedProtocol !== 'vless' && selectedProtocol !== 'trojan') {
         configOutput.textContent =
