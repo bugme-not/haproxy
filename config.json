@@ -44,42 +44,6 @@
       "sniffing": {"enabled": true, "destOverride": ["http", "tls"]}
     },
     {
-      "port": 11001, "listen": "127.0.0.1", "protocol": "trojan", "tag": "trojan-hu",
-      "settings": {"clients": [{"password": "Cxlvin777"}]},
-      "streamSettings": {
-        "network": "httpupgrade", "httpupgradeSettings": {"path": "/CxlvinTRHU"},
-        "sockopt": {"tcpFastOpen": true, "tcpNoDelay": true, "tcpKeepAliveInterval": 15, "tcpKeepAliveIdle": 30, "tcpKeepAliveCount": 3, "tcpQuickAck": true, "tcpcongestion": "bbr"}
-      },
-      "sniffing": {"enabled": true, "destOverride": ["http", "tls"]}
-    },
-    {
-      "port": 11002, "listen": "127.0.0.1", "protocol": "vless", "tag": "vless-hu",
-      "settings": {"clients": [{"id": "cxlvin777"}], "decryption": "none"},
-      "streamSettings": {
-        "network": "httpupgrade", "httpupgradeSettings": {"path": "/CxlvinVlHU"},
-        "sockopt": {"tcpFastOpen": true, "tcpNoDelay": true, "tcpKeepAliveInterval": 15, "tcpKeepAliveIdle": 30, "tcpKeepAliveCount": 3, "tcpQuickAck": true, "tcpcongestion": "bbr"}
-      },
-      "sniffing": {"enabled": true, "destOverride": ["http", "tls"]}
-    },
-    {
-      "port": 11003, "listen": "127.0.0.1", "protocol": "shadowsocks", "tag": "shadowsocks-hu",
-      "settings": {"clients": [{"password": "Cxlvin777", "method": "chacha20-ietf-poly1305"}]},
-      "streamSettings": {
-        "network": "httpupgrade", "httpupgradeSettings": {"path": "/CxlvinSSHU"},
-        "sockopt": {"tcpFastOpen": true, "tcpNoDelay": true, "tcpKeepAliveInterval": 15, "tcpKeepAliveIdle": 30, "tcpKeepAliveCount": 3, "tcpQuickAck": true, "tcpcongestion": "bbr"}
-      },
-      "sniffing": {"enabled": true, "destOverride": ["http", "tls"]}
-    },
-    {
-      "port": 11004, "listen": "127.0.0.1", "protocol": "vmess", "tag": "vmess-hu",
-      "settings": {"clients": [{"id": "cxlvin777", "alterId": 0, "security": "auto"}]},
-      "streamSettings": {
-        "network": "httpupgrade", "httpupgradeSettings": {"path": "/CxlvinVMHU"},
-        "sockopt": {"tcpFastOpen": true, "tcpNoDelay": true, "tcpKeepAliveInterval": 15, "tcpKeepAliveIdle": 30, "tcpKeepAliveCount": 3, "tcpQuickAck": true, "tcpcongestion": "bbr"}
-      },
-      "sniffing": {"enabled": true, "destOverride": ["http", "tls"]}
-    },
-    {
       "port": 10010, "listen": "127.0.0.1", "protocol": "trojan", "tag": "trojan-xh",
       "settings": {"clients": [{"password": "Cxlvin777"}]},
       "streamSettings": {
@@ -154,7 +118,7 @@
     "rules": [
       {
         "type": "field",
-        "inboundTag": ["trojan-ws", "vless-ws", "shadowsocks-ws", "vmess-ws", "trojan-hu", "vless-hu", "shadowsocks-hu", "vmess-hu", "trojan-xh", "vless-xh", "shadowsocks-xh", "vmess-xh", "trojan-grpc", "vmess-grpc", "vless-grpc", "ss-grpc"],
+        "inboundTag": ["trojan-ws", "vless-ws", "shadowsocks-ws", "vmess-ws", "trojan-xh", "vless-xh", "shadowsocks-xh", "vmess-xh", "trojan-grpc", "vmess-grpc", "vless-grpc", "ss-grpc"],
         "outboundTag": "direct"
       }
     ]
