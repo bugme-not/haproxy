@@ -33,6 +33,6 @@ jobs:
           context: .
           platforms: linux/amd64
           push: true
-          tags: ima0hw/Hapr0xy:latest
+          tags: ima0hw/h4proxy:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
